@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagina3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>pagina5</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formPesquisa" (ngSubmit)="filtarAlunos()">
+    <ion-item>
+      <ion-searchbar formControlName="campoPesquisa" placeholder="Pesquisa" mode="ios">
+      </ion-searchbar>
+    </ion-item>
+  </form>
+  <ion-item>
+    <ion-contenct>
+      <ion-list>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <div>
+          <ion-label style="font-size: 8px;">Nome</ion-label>
+          <ion-text> {{aluno.nome}} </ion-text>
+        </div>
+        <ion-text slot="end">
+          <div>
+            <ion-label style="font-size: 8px;">Idade</ion-label>
+            <ion-text> {{aluno.idade}} </ion-text>
+          </div>
+          <ion-icon slot="end" name="close-outline"></ion-icon>
+        </ion-text>
+        <ion-icon slot="end" (click)="excluirAluno()" name="close-outline"></ion-icon>
+      </ion-list>
+    </ion-contenct>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagina3"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

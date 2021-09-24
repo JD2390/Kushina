@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagina3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>pagina4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-header> {{tec.nome}} </ion-header>  
+    <ion-card-content>
+      <ion-icon name="{{tec.icone}}"></ion-icon>
+      {{tec.descricao}}
+      <div>-</div>
+      <ion-button target="_blank" href="{{tec.site}}">Saiba mais</ion-button>      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

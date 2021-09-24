@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>pagina3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header color="primary"> TECNOLOGIAS </ion-list-header>
+    <ion-item detail button (click)="showAlerta(tec)" *ngFor="let tec of tecnologias">
+      <ion-icon
+      slot="start"
+      size="large"
+      style="color: {{tec.cor}}"
+      name="{{tec.icone}}"
+      ></ion-icon>
+      <ion-text>{{ tec.nome }}</ion-text>
+    </ion-item>
+  </ion-list>  
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="voltarHome()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Grandes Empresas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="{{plataforma}}">
+  
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>JD</ion-card-subtitle>
+      <ion-card-title>Guardião</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <div>
+        <img id="guardião" src="../../assets/2020.png" />
+      </div>
+      Cheirinho de Hortelã
+    </ion-card-content>
+  </ion-card> -->
+  <ion-card *ngFor="let item of meusCards"  mode="{{plataforma}}">
+    <ion-card-header mode="{{plataforma}}">
+      <div>
+        <img id="logo" src="{{item.imagem}}" />
+      </div> 
+      <ion-card-subtitle mode="{{plataforma}}">{{item.subtitle}}</ion-card-subtitle>
+      <ion-card-title mode="{{plataforma}}">{{item.title}}</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content mode="{{plataforma}}">           
+      {{item.content}}
+    </ion-card-content>
+    <ion-item mode="{{plataforma}}">
+      <ion-note slot="start" mode="{{plataforma}}">Valor de mercado:</ion-note>
+      <ion-label mode="{{plataforma}}">{{item.valor}}</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
